@@ -1,0 +1,96 @@
+* {
+    outline: none;
+    font-family: Arial, serif;
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  form, [ngForm], ngForm, [ng-reflect-form], [ngModelGroup], [formGroupName], [formArrayName] {
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    display: block;
+  }
+  
+  label {
+    display: inline-block;
+    width: 150px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+  }
+  
+  input {
+    padding: 3px 4px;
+    border-radius: 3px;
+    border: 1px solid #DFDFDF;
+  }
+  
+  input:focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+  }
+  
+  [rootNestableForm] h3 {
+    color: blue;
+  }
+  
+  .form-state {
+    color:red;
+  }
+  
+  .form-state.valid {
+    color:green;
+  }
+  
+  p {
+    margin-left: 10px;
+  }
+  
+  pre {
+    padding: 10px;
+    background-color: #F8F8F9;
+    color: #aaa;
+    white-space: pre;
+    border-radius: 5px;
+    font: 13px 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  }
+  
+  button {
+    box-shadow: inset 0 0 0 0 #54a3f7;
+    background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    border: none;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 25px;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background: #0061a7 linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+  }
+  
+  button:active {
+    position: relative;
+    top: 1px;
+  }
+  
+  button[disabled] {
+    background: #B9B9B9;
+  }
+
+  errors ul
+  {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    padding-left: 18px;
+    margin-left: 148px;
+    margin-bottom: 5px;
+  }

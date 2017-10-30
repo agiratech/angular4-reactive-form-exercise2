@@ -1,0 +1,39 @@
+<h1>Angular 4 : Reactive Forms - Part 2</h1>
+<form [formGroup]="validateForm" (ngSubmit)="register(validateForm)" novalidate>
+  <p> Is "validateForm" valid? {{(validateForm.valid?'Yes':'No')}} </p>
+
+  <div>
+    <label>Name</label>
+    <input type="text" name="name" formControlName="name"  >
+    <errors [control]="validateForm.controls.name"></errors>
+  </div>
+  <div>
+    <label>Email</label>
+    <input type="text" name="email" formControlName="email" >
+    <errors [control]="validateForm.controls.email"></errors>
+  </div>
+  <div>
+    <label>Age</label>
+    <input type="number" name="age" formControlName="age">
+    <errors [control]="validateForm.controls.age"></errors>
+  </div>
+
+  <div formGroupName="address">
+    <h3>Address</h3>
+    <div>
+      <label>Country</label>
+      <input type="text" name="country" formControlName="country"   minlength="5" maxlength="30">
+      <errors [control]="validateForm.controls.address.controls.country"></errors>
+    </div>
+    <div>
+      <label>City</label>
+      <input type="text" name="city" formControlName="city" >
+      <errors [control]="validateForm.controls.address.controls.city"></errors>
+    </div>
+  </div>
+
+  <errors [control]="validateForm"></errors>
+
+  <pre>{{validateForm.value | json}}</pre>
+  <button type="submit" [disabled]="validateForm.invalid">Submit</button>
+</form>
